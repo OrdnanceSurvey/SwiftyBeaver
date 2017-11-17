@@ -21,20 +21,19 @@ public class ConsoleDestination: BaseDestination {
                 reset = "\u{001b}[0m"
                 escape = "\u{001b}[38;5;"
                 levelColor.verbose = "251m"     // silver
-                levelColor.debug = "35m"        // green
-                levelColor.info = "38m"         // blue
+                levelColor.debug = "38m"        // blue
+                levelColor.info = "35m"         // green
                 levelColor.warning = "178m"     // yellow
                 levelColor.error = "197m"       // red
 
             } else {
                 // use colored Emojis for better visual distinction
                 // of log level for Xcode 8
-                levelColor.verbose = "💜 "     // silver
-                levelColor.debug = "💚 "        // green
-                levelColor.info = "💙 "         // blue
-                levelColor.warning = "💛 "     // yellow
-                levelColor.error = "❤️ "       // red
-
+                levelColor.verbose = "ℹ️ "       // silver
+                levelColor.debug = "Ⓜ️ "         // blue
+                levelColor.info = "✅ "          // green
+                levelColor.warning = "⚠️ "       // yellow
+                levelColor.error = "❌ "         // red
             }
         }
     }
@@ -43,11 +42,11 @@ public class ConsoleDestination: BaseDestination {
 
     public override init() {
         super.init()
-        levelColor.verbose = "💜 "     // silver
-        levelColor.debug = "💚 "        // green
-        levelColor.info = "💙 "         // blue
-        levelColor.warning = "💛 "     // yellow
-        levelColor.error = "❤️ "       // red
+        levelColor.verbose = "ℹ️ "      // silver
+        levelColor.debug = "Ⓜ️ "        // blue
+        levelColor.info = "✅ "         // green
+        levelColor.warning = "⚠️ "      // yellow
+        levelColor.error = "❌ "        // red
     }
 
     // print to Xcode Console. uses full base class functionality

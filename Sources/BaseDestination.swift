@@ -61,8 +61,8 @@ open class BaseDestination: Hashable, Equatable {
     // empty on default
     public struct LevelColor {
         public var verbose = ""     // silver
-        public var debug = ""       // green
-        public var info = ""        // blue
+        public var debug = ""       // blue
+        public var info = ""        // green
         public var warning = ""     // yellow
         public var error = ""       // red
     }

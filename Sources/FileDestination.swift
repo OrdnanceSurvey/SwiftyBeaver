@@ -58,8 +58,8 @@ public class FileDestination: BaseDestination {
         reset = "\u{001b}[0m"
         escape = "\u{001b}[38;5;"
         levelColor.verbose = "251m"     // silver
-        levelColor.debug = "35m"        // green
-        levelColor.info = "38m"         // blue
+        levelColor.debug = "38m"        // blue
+        levelColor.info = "35m"         // green
         levelColor.warning = "178m"     // yellow
         levelColor.error = "197m"       // red
     }
