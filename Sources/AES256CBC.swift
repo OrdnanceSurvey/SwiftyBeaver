@@ -27,12 +27,12 @@ fileprivate struct Random {
     }
 }
 
-final class AES256CBC {
+public final class AES256CBC {
 
     /// returns optional encrypted string via AES-256CBC
     /// automatically generates and puts a random IV at first 16 chars
     /// the password must be exactly 32 chars long for AES-256
-    class func encryptString(_ str: String, password: String) -> String? {
+    public class func encryptString(_ str: String, password: String) -> String? {
         if !str.isEmpty && password.count == 32 {
             let iv = randomText(16)
             let key = password
@@ -48,7 +48,7 @@ final class AES256CBC {
 
     /// returns optional decrypted string via AES-256CBC
     /// IV need to be at first 16 chars, password must be 32 chars long
-    class func decryptString(_ str: String, password: String) -> String? {
+    public class func decryptString(_ str: String, password: String) -> String? {
         if str.count > 16 && password.count == 32 {
             // get AES initialization vector from first 16 chars
             #if swift(>=4.0)
@@ -71,7 +71,7 @@ final class AES256CBC {
 
     /// returns random string (uppercase & lowercase, no spaces) of 32 characters length
     /// which can be used as SHA-256 compatbile password
-    class func generatePassword() -> String {
+    public class func generatePassword() -> String {
         return randomText(32)
     }
 
