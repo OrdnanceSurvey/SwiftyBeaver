@@ -442,7 +442,7 @@ public class SBPlatformDestination: BaseDestination {
     }
 
     /// returns AES-256 CBC encrypted optional string
-    func encrypt(_ str: String) -> String? {
+    public func encrypt(_ str: String) -> String? {
         return AES256CBC.encryptString(str, password: encryptionKey)
     }
 
